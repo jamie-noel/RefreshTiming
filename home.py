@@ -1,16 +1,10 @@
 import streamlit as st
 
-if "input_1" not in st.session_state:
-    st.session_state.input_1 = ""
-
-if "input_2" not in st.session_state:
-    st.session_state.input_2 = ""
-
-if "input_3" not in st.session_state:
-    st.session_state.input_3 = ""
-
 
 # Method 1
+
+if "input_1" not in st.session_state:
+    st.session_state.input_1 = ""
 
 with st.container():
     col11, col12 = st.columns([1,1])
@@ -24,6 +18,9 @@ with st.container():
 
 
 # Method 2
+
+if "input_2" not in st.session_state:
+    st.session_state.input_2 = ""
 
 def callback():
     st.session_state.input_2 = input_2_temp
@@ -40,6 +37,9 @@ with st.container():
 
 
 # Method 3
+        
+if "input_3" not in st.session_state:
+    st.session_state.input_3 = ""
 
 with st.container():
     col31, col32 = st.columns([1,1])
